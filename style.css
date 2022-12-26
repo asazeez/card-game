@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+:root{
+    --card-width:126px;
+    --card-height:126px;
+}
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height:100vh;
+    background-color: #87CEEB;
+}
+p{
+    
+    display: flex;
+    /**font-size:30px;**/
+    align-items :center;
+    margin:0px;
+    height: 50px;
+   /** width:200px;**/
+
+
+}
+/**main{
+    height:55%;
+    display: flex;
+    justify-content:center;
+    border: 1px solid black;
+
+}**/
+.card-container{
+    /**position: relative;
+    height: 100%;
+    height:700px;
+    width:700px;
+    display: grid; 
+    gap: 10px;**/
+    position: relative;
+    display:grid;
+    width:30%;
+    grid-template-columns: repeat(auto-fit,33.3333333%);
+    margin: auto;
+    gap: 10px;
+
+}
+.card-container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    position:relative;
+    height:var(--card-height);
+    width:var(--card-width);
+  
+    perspective: 1000px;
+    cursor: pointer;
+    justify-content: center;
+
+  
+}
+.card-inner{
+    position: absolute;
+    width:100%;
+    height:100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card-front, .card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card-img{
+    height:100%;
+}
+.card-back{
+    transform: rotateY(180deg);
+}
+.card-inner.flip-it{
+
+    transform: rotateY(180deg);
+}
+
+.grid-size{
+    background-color:white; 
+    border-color:gray;
+    font-size: 12px;
+    border-radius: 8px;
+    width: 80px;
+    height: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    color: black;
+}
+.play-game{
+    background-color:white; 
+    border-color:gray;
+    font-size: 12px;
+    border-radius: 8px;
+    width: 120px;
+    height: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    color: black;
+}

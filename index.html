@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <style>
+        /**.box{
+            border:1px solid black;
+            text-align:center;
+            display:flex;
+        }
+        .card-container{
+            display:grid;
+            width: 400px;
+            height:400px;
+            margin: auto;
+        }**/
+    </style>
+    </style>
+    <link rel="stylesheet" href='style.css'>
+</head>
+
+<body>
+    <header>
+        <div class="header-title-container">
+            <h1>Memory Game 2</h1>
+        </div>
+        <div class="header-round-info-container">
+            <div class="header-image-container">
+            </div>
+            <div class="header-status-info-container">
+                <button id = "size4" class="grid-size">4x4</button>
+                <button id = "size5" class="grid-size">5x5</button>
+                <button id = "size6" class="grid-size">6x6</button>
+                <h2>Card Type: <span id="cardType"> </span></h2>
+                
+            </div>
+            <div class="header-score-container">
+                <h2> Score: <span id="score"></span></h2>
+            </div>
+        <div class="header-button-container">
+            <div class="game-play-button-container">
+                <p class="current-status">
+                    Click 'Play Game' button to play game
+                </p>
+                <button id = "playGame" class="play-game">Play Game</button>
+                <p id="countdown"></p>
+            </div>
+        </div>
+       
+    </div>
+    </header>
+    <main>
+        <div class="card-container" id="parent"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
+
